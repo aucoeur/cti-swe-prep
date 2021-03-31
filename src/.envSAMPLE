@@ -1,0 +1,2 @@
+DJANGO_SECRET_KEY=sittingonasecretskeletonkey
+AWS_INSTANCE_URL=randomnumbersandletters.cloud9.us-east-1.amazonaws.com

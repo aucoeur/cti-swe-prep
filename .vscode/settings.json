@@ -1,0 +1,10 @@
+{
+    "python.analysis.extraPaths": [
+        "./env",
+        "./src",
+        "./test"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": false,
+    "python.pythonPath": "env/bin/python"
+}
