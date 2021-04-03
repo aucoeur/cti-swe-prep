@@ -13,7 +13,8 @@ class PageDetailView(DetailView):
     """ Renders page based on slug """
     model = Page
 
+    # [TODO] Temporary for now.  Probably should use serializer if keeping JSON, or template if View..
     def get(self, request, slug):
-        data = self.get_queryset().get(slug__iexact=slug)
-        json_data = json.dumps(list(data))
-        return HttpResponse(json_data, content_type='application/json')
+        data = Page.objects.get(slug__iexact=slug)
+        to_json = serialize('json', [data])
+        return HttpResponse(to_json)
